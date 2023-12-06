@@ -5,10 +5,9 @@ const channels = require('../Jsons/channels.json')
 
 const Evorpg   = require('./Evorpg.js')
 
-module.exports.run = (Client) => {
+module.exports.run = async(Client) => {
   
-  Evorpg.run(Client, channels)
+  console.log(colors.magenta('\n[Handler]'), '1 Task carregada.')
   
-  console.log(colors.magenta('[Handler]'), '1 Task carregada.')
-  
+  Evorpg.run(Client, channels)      
 }
